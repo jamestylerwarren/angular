@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html ng-app="modelTest">
+<head>
+    <meta charset="utf-8">
+    <title>Template Test</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js">
+    </script>
+    <style>
+        input.ng-invalid {
+            background-color: red;
+            color: white;
+        }
+    	input.ng-pristine {
+    		background-color: white;
+    	}
+    	input.ng-valid {
+    		background-color: green;
+    		color: white;
+    	}
+    </style>
+</head>
+<body>
+	<form novalidate>
+	    <label for="first_name">First Name</label>
+	    <input type="text" id="first_name" ng-model="user.firstName" minlength="1" maxlength="50" required>
+
+	    <label for="email">email</label>
+	    <input type="email" id="email" ng-model="user.email" maxlength="30" required>
+
+	    <label for="dateOfBirth">Date of Birth</label>
+	    <input type="date" id="dateOfBirth" ng-model="user.dateOfBirth" required>
+
+	    <label for="github">Github</label>
+	    <input type="url" id="github" ng-model="user.github" minlength="5" required>
+        <button type=submit>submit</button>
+	</form>
+    <script type="text/javascript" src="js/modelTest.js"></script>
+</body>
+</html>

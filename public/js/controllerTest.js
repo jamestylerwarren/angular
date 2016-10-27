@@ -9,6 +9,6 @@
         this.toggleElement = function() {
             this.showElement = !this.showElement;
         };
-        
+
     });
 })();

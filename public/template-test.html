@@ -32,6 +32,15 @@
 	    Welcome {{ user.firstName }} {{ user.lastName }}<br>
 	    We will send a confirmation eMail to {{ user.email }}
 	</div>
+
+	<div ng-controller="TemplateController as t">
+		<div ng-show="t.toggleElement">
+			To show or not to show?? That is the question.
+		</div>
+		<button ng-click="t.toggleElement()">Toggle Element</button>
+	</div>
+
+	
     <script type="text/javascript" src="js/templateTest.js"></script>
 </body>
 </html>

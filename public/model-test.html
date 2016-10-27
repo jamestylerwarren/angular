@@ -41,14 +41,12 @@
         <p>DOB: {{user.dateOfBirth|date:"MM/dd/yyyy"}}</p>
         <p>Github: {{user.github}}</p>
     </div>
-    <div ng-app="modelTest">
-        <div ng-controller="ModelController as t">
-            <button ng-click="t.toggleElement()">Toggle Element</button>
-            <div ng-hide="t.showElement">
-                To show or not to show?? That is the question.
-            </div>
+    <div ng-controller="ModelController as m">
+        <button ng-click="m.toggleElement()">Toggle Element</button>
+        <div ng-hide="m.showElement">
+            To show or not to show?? That is the question.
         </div>
-    </div>   
+    </div>
     <script type="text/javascript" src="js/modelTest.js"></script>
 </body>
 </html>

@@ -40,13 +40,13 @@
 		<div class="col-md-3" class="form-group">
 			<h1>Add item to cart</h1>
 			<label for="name">Item: </label>
-			<input ng-model="item.name"type="textarea" name="name" rows="1" minlength="2" maxlength="50" placeholder="Enter a single item" required></input>
+			<input ng-model="item.name" type="text" name="name" rows="1" minlength="2" maxlength="20" placeholder="Enter a single item" required></input>
 
 			<label for="qty">Qty: </label>
 			<input ng-model="item.qty" type="number" name="qty" rows="1" minlength="1" maxlength="4" placeholder="Enter qty" number required></input>
 
 			<label for="cost">Cost per item: </label>
-			<input ng-model="item.cost" type="number" name="cost" rows="1" minlength="1" maxlength="50" placeholder="Enter cost per item" required></input>
+			<input ng-model="item.cost" type="number" name="cost" rows="1" minlength="1" maxlength="6" placeholder="Enter cost per item" required></input>
 
 			<button type="submit" class="btn btn-primary" >Add item to cart</button>
 		</div>
@@ -56,27 +56,15 @@
 		<table class="table table-striped table-bordered table-hover">
 		  <tr>
 		    <th>Item</th>
-		    <th>Cost per Item</th>
 		    <th>Qty</th>
+		    <th>Cost per Item</th>
 		    <th>Total</th>
 		  </tr>
-		  <tr ng-repeat:>
-		    <td>Pizza</td>
-		    <td>5.00</td>
-		    <td>5</td>
-		    <td>25.00</td>
-		  </tr>
 		  <tr>
-		    <td>Peanut Butter</td>
-		    <td>2.00</td>
-		    <td>2</td>
-		    <td>4.00</td>
-		  </tr>
-		  <tr>
-		    <td>Onions</td>
-		    <td>.50</td>
-		    <td>4</td>
-		    <td>2.0</td>
+		    <td>{{item.name}}</td>
+		    <td>{{item.qty}}</td>
+		    <td>{{item.cost}}</td>
+		    <td>{{item.cost * item.qty | currency}}</td>
 		  </tr>
 		</table>
 	</div>

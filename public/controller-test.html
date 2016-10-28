@@ -3,10 +3,16 @@
 <head>
     <meta charset="utf-8">
     <title>Controller Test</title>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js">
-    </script>
+    
     <!-- Bootstrap Core CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome CDN -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js">
+    </script>
+
     <style>
     	label, input {
     		display:block;
@@ -37,18 +43,19 @@
 	<!-- Novalidate disables the browser's default validation. Angular recommends
      doing this in order to make a more consistent user experience across browsers -->
 	<form novalidate>
-		<div class="col-md-3" class="form-group">
+		<div class="col-md-3 form-group">
 			<h1>Add item to cart</h1>
+
 			<label for="name">Item: </label>
 			<input ng-model="item.name" type="text" name="name" rows="1" minlength="2" maxlength="20" placeholder="Enter a single item" required></input>
 
 			<label for="qty">Qty: </label>
-			<input ng-model="item.qty" type="number" name="qty" rows="1" minlength="1" maxlength="4" placeholder="Enter qty" number required></input>
+			<input ng-model="item.qty" type="number" name="qty" rows="1" minlength="1" maxlength="4" placeholder="Enter qty" number min="1" required></input>
 
 			<label for="cost">Cost per item: </label>
-			<input ng-model="item.cost" type="number" name="cost" rows="1" minlength="1" maxlength="6" placeholder="Enter cost per item" required></input>
+			<input ng-model="item.cost" type="number" name="cost" rows="1" minlength="1" maxlength="8" placeholder="Enter cost per item" min="0.01" required></input>
 
-			<button type="submit" class="btn btn-primary" >Add item to cart</button>
+			<button ng-click="m.toggleElement()" type="submit" class="btn btn-primary" >Add item to cart</button>
 		</div>
 	</form>
 	<div class="col-md-5 table-responsive">
@@ -63,7 +70,7 @@
 		  <tr>
 		    <td>{{item.name}}</td>
 		    <td>{{item.qty}}</td>
-		    <td>{{item.cost}}</td>
+		    <td>{{item.cost | currency}}</td>
 		    <td>{{item.cost * item.qty | currency}}</td>
 		  </tr>
 		</table>

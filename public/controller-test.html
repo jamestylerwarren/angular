@@ -5,8 +5,30 @@
     <title>Controller Test</title>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js">
     </script>
+    <!-- Bootstrap Core CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+    	html {
+    		padding: 10px;
+    	}
+    	
+    </style>
 </head>
 <body>
+	<form>
+		<h1>Build my cart</h1>
+		<div class="form-group">
+			<label>Item: </label>
+			<textarea rows="1" cols="20" placeholder="Enter a single item" required></textarea>
+			<label>Cost per item: </label>
+			<textarea rows="1" cols="20" placeholder="Enter cost per item" required></textarea>
+			<label>Qty: </label>
+			<textarea rows="1" cols="10" placeholder="Enter a qty" required></textarea><br>
+			<button type="submit" class="btn btn-primary" >Add item to cart</button>
+		</div>
+	</form>
+
+
     <script type="text/javascript" src="js/controllerTest.js"></script>
 </body>
 </html>

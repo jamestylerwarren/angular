@@ -2,13 +2,14 @@
 
 (function() {
     var app = angular.module("controllerTest", []);
-    app.controller("ModelController", function() {
-
-        this.showElement = true;
-
-        this.toggleElement = function() {
-            this.showElement = !this.showElement;
-        };
+    app.controller("CartController", function() {
+    	items = [];
+    	newItem = 1;
+    	var newItem = "";
+    	function addItem(newItem){
+    		items.push(newItem);
+    		console.log(items);
+    	}
 
     });
 })();

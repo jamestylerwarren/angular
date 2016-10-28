@@ -8,26 +8,59 @@
     <!-- Bootstrap Core CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <style>
-    	html {
-    		padding: 10px;
+    	label {
+    		display:block;
     	}
-    	
+
+		textarea { 
+			display:block;
+			margin: 5px; 
+		}
+
+		table {
+			width:75%;
+		}
+
     </style>
 </head>
 <body>
 	<form>
-		<h1>Build my cart</h1>
-		<div class="form-group">
-			<label>Item: </label>
-			<textarea rows="1" cols="20" placeholder="Enter a single item" required></textarea>
-			<label>Cost per item: </label>
-			<textarea rows="1" cols="20" placeholder="Enter cost per item" required></textarea>
-			<label>Qty: </label>
-			<textarea rows="1" cols="10" placeholder="Enter a qty" required></textarea><br>
+		<div class="col-md-3" class="form-group">
+			<h1>Build my cart</h1>
+			<label for="item">Item: </label>
+			<textarea name="item"rows="1" cols="20" placeholder="Enter a single item" required></textarea>
+			<label for="qty">Qty: </label>
+			<textarea name="qty" rows="1" cols="20" placeholder="Enter cost per item" required></textarea>
+			<label for="cost">Cost per item: </label>
+			<textarea name="cost" rows="1" cols="20" placeholder="Enter a qty" required></textarea>
 			<button type="submit" class="btn btn-primary" >Add item to cart</button>
 		</div>
 	</form>
-
+	<div class="col-md-4 table-responsive">
+		<h1>My cart</h1>
+		<table class="table table-striped table-bordered table-hover">
+		  <tr>
+		    <th>Item</th>
+		    <th>Cost per Item</th>
+		    <th>Qty</th>
+		  </tr>
+		  <tr>
+		    <td>Pizza</td>
+		    <td>5.00</td>
+		    <td>5</td>
+		  </tr>
+		  <tr>
+		    <td>Peanut Butter</td>
+		    <td>2.00</td>
+		    <td>2</td>
+		  </tr>
+		  <tr>
+		    <td>Onions</td>
+		    <td>.50</td>
+		    <td>4</td>
+		  </tr>
+		</table>
+	</div>
 
     <script type="text/javascript" src="js/controllerTest.js"></script>
 </body>

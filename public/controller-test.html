@@ -47,13 +47,13 @@
 			<h1>Add item to cart</h1>
 
 			<label for="name">Item: </label>
-			<input type="text" name="name" rows="1" minlength="2" maxlength="20" placeholder="Enter a single item" required></input>
+			<input ng-model="name" type="text" name="name" rows="1" minlength="2" maxlength="20" placeholder="Enter a single item" required></input>
 
 			<label for="qty">Qty: </label>
-			<input type="number" name="qty" rows="1" minlength="1" maxlength="4" placeholder="Enter qty" number min="1" required></input>
+			<input ng-model="qty" type="number" name="qty" rows="1" minlength="1" maxlength="4" placeholder="Enter qty" number min="1" required></input>
 
 			<label for="cost">Cost per item: </label>
-			<input type="number" name="cost" rows="1" minlength="1" maxlength="8" placeholder="Enter cost per item" min="0.01" required></input>
+			<input ng-model="cost" type="number" name="cost" rows="1" minlength="1" maxlength="8" placeholder="Enter cost per item" min="0.01" required></input>
 
 			<button ng-click="c.addItemToCart()" type="submit" class="btn btn-primary" >Add item to cart</button>
 		</div>
